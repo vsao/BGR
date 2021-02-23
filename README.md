@@ -90,7 +90,7 @@ In figure 4, reference voltage is approximately 1.173V at room temperature. Refe
 ### Variation Of Reference Voltage With Respect To VDD  
 As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage is about 0.55mVfrom 1.17305V to 1.1736V, which is 0.55%with respect to change in VDD. 
 
-|<img title="Variation Of Reference Voltage With Respect To VDD" src="images/Vrefvdd.png" width="600" length="600">|
+|<img title="Variation Of Reference Voltage With Respect To VDD" src="images/vrefvdd.png" width="600" length="600">|
 |:--:| 
 |*Figure 2: Variation Of Reference Voltage With Respect To VDD*|
 
@@ -111,7 +111,7 @@ Transient simulation analyses in Figure 6 shows the settling time of BGR output.
 
 The layout was designed with help of the “Layout XL” based on Cadence Virtuoso. The layout of BGR as shown in figure 7 was completed with zero Design Rule Check (DRC) and Layout Versus Schematic (LVS) errors using Cadence Assura. The post layout simulation results including the parasitic extraction were verified. The layout also consists of common centroid technique for matching purpose and including dummies. The total area of the chip was .The layout consists of Bandgap core consisting of BJTs, resistors and Mosfets, start-up circuit and OPAMP consisting of Mosfets only.  
 
-|<img title="Layout of Bandgap Reference" src="images/bangaplayout.jpg" width="600" length="600">|
+|<img title="Layout of Bandgap Reference" src="images/bandgaplayout.jpg" width="800" length="800">|
 |:--:| 
 |*Figure 2: Layout of Bandgap Reference*|
 
