@@ -19,6 +19,10 @@ When the temperature increases, voltage will decreaseat Vddue toincrease in Isth
 
 To create PTAT, we have to maintain equal voltage at Vd and Vso that differenceV-Vd1 equal to voltage drop across R1 is directly proportionalto temperature. The circuit shown in Figure 1 has been used to implement this.  
 
+|<img title="Ptat and Ctat" src="images/pnctat.jpg" width="600" length="600">|
+|:--:| 
+|*Figure 2: PTAT and CTAT Design*|
+
 
 The addition of CTAT and PTAT shouldgive a constant reference voltage.Any combination of CTAT and PTAT will not give desirable Vref due to slope difference between CTAT and PTAT.For the CTAT and PTAT to exactly cancel each other, slope of PTAT is increased using a high resistance value i.e. R2.
 
@@ -54,11 +58,21 @@ Operational Amplifier used in this circuit is basically a single stage different
 Table 1 lists the opamp components and their parameters:
 
 
+|<img title="Schematic Diagram Of OPAMP" src="images/opamp.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Schematic Diagram Of OPAMP*|
 
 
 ### Bandgap Core  
 Bandgap core consists of 4 pmos transistors (M2, M3, M4, M5), 3 diodes (D1, D2, D3), one mos capacitor M9 and two resistors Rand R2.As voltage drop across resistor R is PTAT in nature, so current through the resistor is also a PTAT. Gates of all the transistors (M2, M3, M4, M5) are shorted making Vgs equal, hence same drain to source current flows through all these transistors. This PTAT current generates PTAT voltage across resistor R2.The value of resistance R2 is adjusted such that slope of PTAT cancels the slope of CTATto give a constant reference voltage.A capacitor M9 also referred as compensating capacitor is included in the negative feedback path of opamp.This is area efficient and its density is 8 times higher than MIM capacitor.Its function is to stabilize the negative feedback otherwise it will oscillate and become unstable.
 Table 1 lists the device components and parameters:
+
+
+
+
+|<img title="Overall Bandgap Reference Circuit" src="images/bandgapcore.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Overall Bandgap Reference Circuit*|
 
 
 ## ANALYSIS OF SIMULATION RESULT  
@@ -68,13 +82,25 @@ All the simulations were done using SPECTRE tool. The models of the device were 
 ### Variation of reference voltage with respect to temperature  
 In figure 4, reference voltage is approximately 1.173V at room temperature. Reference voltage varies very little from 0º to 85ºC and remains almost constant from 10º to 50ºC. Total variation ofreference voltage is about 0.85mv which is 0.072% of reference voltage. 
 
+|<img title="Overall Bandgap Reference Circuit" src="images/bandgapcore.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Overall Bandgap Reference Circuit*|
+
 
 ### Variation Of Reference Voltage With Respect To VDD  
-As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage is about 0.55mVfrom 1.17305V to 1.1736V, which is 0.55%with respect to change in VDD.  
+As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage is about 0.55mVfrom 1.17305V to 1.1736V, which is 0.55%with respect to change in VDD. 
 
+|<img title="Variation Of Reference Voltage With Respect To Temperature" src="images/Vreftemp.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Variation Of Reference Voltage With Respect To Temperature*|
 
 ### Bandgap Reference Settling Time  
 Transient simulation analyses in Figure 6 shows the settling time of BGR output. It is found that the circuit acquired 38.929μs to produce stable output when the supply voltage ramping up from 200.0184us to 238.9475us.
+
+
+|<img title="Bandgap Reference Settling Time" src="images/settelingtime.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Bandgap Reference Settling Time*|
 
 
 
@@ -84,6 +110,10 @@ Transient simulation analyses in Figure 6 shows the settling time of BGR output.
 ## LAYOUT
 
 The layout was designed with help of the “Layout XL” based on Cadence Virtuoso. The layout of BGR as shown in figure 7 was completed with zero Design Rule Check (DRC) and Layout Versus Schematic (LVS) errors using Cadence Assura. The post layout simulation results including the parasitic extraction were verified. The layout also consists of common centroid technique for matching purpose and including dummies. The total area of the chip was .The layout consists of Bandgap core consisting of BJTs, resistors and Mosfets, start-up circuit and OPAMP consisting of Mosfets only.  
+
+|<img title="Layout of Bandgap Reference" src="images/bangaplayout.png" width="600" length="600">|
+|:--:| 
+|*Figure 2: Layout of Bandgap Reference*|
 
 ## CONCLUSION  
 
