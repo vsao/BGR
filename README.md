@@ -51,5 +51,52 @@ D. OPAMP
 
 Operational Amplifier used in this circuit is basically a single stage differential amplifier. Its main functionis to drive the bandgap core. It is designed in such a way that its output is insensitive to variation in supply whichhelps to establish asupply independentreference voltage.It can be seen fromfigure3 that Mo3, Mo4 and Mo5, Mo6 are differential pairs.These are the node transistors and we have taken m=4 for matching purpose. Only two transistors could have been used but that would increase the length which would be difficult for matching in layout. The current mirror formed by Mo1 and Mo2 supplies the differential pair with bias current.Another important aspect of OPAMP design is to produce a current which is insensitive to variation of VDD (supply voltage).This is accomplished by driving the amplifier with its own output current. This is done by mirroring Mo7 and Mo8 where Mo7 is the tail transistor. This makes the output current of operational amplifier almost constant with respect to voltage.
 
+Table 1 lists the opamp components and their parameters:
+
+
+
+
+E. Bandgap Core  
+Bandgap core consists of 4 pmos transistors (M2, M3, M4, M5), 3 diodes (D1, D2, D3), one mos capacitor M9 and two resistors Rand R2.As voltage drop across resistor R is PTAT in nature, so current through the resistor is also a PTAT. Gates of all the transistors (M2, M3, M4, M5) are shorted making Vgs equal, hence same drain to source current flows through all these transistors. This PTAT current generates PTAT voltage across resistor R2.The value of resistance R2 is adjusted such that slope of PTAT cancels the slope of CTATto give a constant reference voltage.A capacitor M9 also referred as compensating capacitor is included in the negative feedback path of opamp.This is area efficient and its density is 8 times higher than MIM capacitor.Its function is to stabilize the negative feedback otherwise it will oscillate and become unstable.
+Table 1 lists the device components and parameters:
+
+
+III. ANALYSIS OF SIMULATION RESULT  
+
+All the simulations were done using SPECTRE tool. The models of the device were used based on XFAB Technology. 0.18 micron process has been used in the design.
+
+A. Variation of reference voltage with respect to temperature  
+In figure 4, reference voltage is approximately 1.173V at room temperature. Reference voltage varies very little from 0º to 85ºC and remains almost constant from 10º to 50ºC. Total variation ofreference voltage is about 0.85mv which is 0.072% of reference voltage. 
+
+
+B.Variation Of Reference Voltage With Respect To VDD  
+As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage is about 0.55mVfrom 1.17305V to 1.1736V, which is 0.55%with respect to change in VDD.  
+
+
+C.Bandgap Reference Settling Time  
+Transient simulation analyses in Figure 6 shows the settling time of BGR output. It is found that the circuit acquired 38.929μs to produce stable output when the supply voltage ramping up from 200.0184us to 238.9475us.
+
+
+
+D. Bandgap ReferenceDatasheet
+
+
+IV. LAYOUT
+
+The layout was designed with help of the “Layout XL” based on Cadence Virtuoso. The layout of BGR as shown in figure 7 was completed with zero Design Rule Check (DRC) and Layout Versus Schematic (LVS) errors using Cadence Assura. The post layout simulation results including the parasitic extraction were verified. The layout also consists of common centroid technique for matching purpose and including dummies. The total area of the chip was .The layout consists of Bandgap core consisting of BJTs, resistors and Mosfets, start-up circuit and OPAMP consisting of Mosfets only.  
+
+V.CONCLUSION  
+
+A simple bandgap reference circuit in 0.18 micron CMOS process has been designed. The Bandgap Reference testbench was simulated using SPECTRE. In this circuit, the reference voltageis found to be 1.173V. The operational amplifier used in the circuit is a singlestage differential amplifierhaving gain around 45db. The variation of reference voltage is about 0.072%with respect to supply voltage.  
+
+VI.REFERENCES  
+[1] B. Razavi, “Design of Analog CMOS Integrated Circuits” Tata Mcgrow-Hill Edition, 2002, ch. 11.  
+[2] Adel S. Sedra, Kenneth C. Smith, “Microelectronic Circuits (4th ed.)” Oxford University Press, 2007, ch. 8, p. 852.  
+[3] Md. Shafiullah, “Design of a Simple CMOS Bandgap Reference”, IEEE 2010  
+[4] Kang S., Leblebici Y.,“CMOS Digital Integrated Circuits: Analysis and Design”, 2ndEd., 2003  
+[5] Tony Chan Carusone, David A. Johns, and Kenneth A. Martin. Analog Integrated Circuit Design.Wiley,2ndedition,2012  
+[6] Dan CleinCMOS IC Layout: Concepts, Methodologies and Tools. Newnes, 2000.  
+[7] Anant Agarwal and Jeffrey Lang. Foundations of Analogand Digital Electronic Circuits. Elsevier, July2005
+
 
 
