@@ -11,4 +11,7 @@ The bandgap reference circuit is obtained by the addition of CTAT and PTAT in th
 To generate current reference and voltage reference, different circuits were implemented and their tempco values were calculated to provide us a clear picture of current and voltage variations with respect to temperature. In simple current mirror, ideal current source is used. Tempco value of simple current mirror circuit is found to be 5.14ppm/0C. To implement this circuit practically, a resistance(100K) is connected at the drain of nmos, this circuit is known as current reference. The tempco value is found to be 404.51ppm/0C. Instead of using ideal resistor, rnp1h which is included in 0.18um technology is used. The tempco value of circuit with rnp1h is 4.014K ppm/0C. As temperature variations in resistor is higher, hence tempco values of these circuits are higher than simple current mirror. 
 
 A. Creating CTAT and PTAT: 
+According to diode voltage:  
+
+
 
