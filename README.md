@@ -106,7 +106,7 @@ As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage
 Transient simulation analyses in Figure 6 shows the settling time of BGR output. It is found that the circuit acquired 38.929μs to produce stable output when the supply voltage ramping up from 200.0184us to 238.9475us.
 
 
-|<img title="Bandgap Reference Settling Time" src="images/Settelingtime.png" width="700" length="700">|
+|<img title="Bandgap Reference Settling Time" src="images/Settelingtime.jpg" width="700" length="700">|
 |:--:| 
 |*Figure 6: Bandgap Reference Settling Time*|
 
