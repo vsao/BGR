@@ -15,6 +15,7 @@ According to diode voltage:
 <a href="https://www.codecogs.com/eqnedit.php?latex=I_{0}&space;=&space;I_{s}\cdot&space;e^{\frac{V_{D}}{V_{T}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?I_{0}&space;=&space;I_{s}\cdot&space;e^{\frac{V_{D}}{V_{T}}}" title="I_{0} = I_{s}\cdot e^{\frac{V_{D}}{V_{T}}}" /></a>
 
 When the temperature increases, voltage will decreaseat Vddue toincrease in Isthus creatingCTAT.In the equation below, Vd contains weak PTAT and strong CTAT.  
+<a href="https://www.codecogs.com/eqnedit.php?latex=V_{D}=V_{T}\cdot&space;ln\left&space;(&space;\frac{I_{o}}{I_{s}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V_{D}=V_{T}\cdot&space;ln\left&space;(&space;\frac{I_{o}}{I_{s}}&space;\right&space;)" title="V_{D}=V_{T}\cdot ln\left ( \frac{I_{o}}{I_{s}} \right )" /></a>
 
 
 To create PTAT, we have to maintain equal voltage at Vd and Vso that differenceV-Vd1 equal to voltage drop across R1 is directly proportionalto temperature. The circuit shown in Figure 1 has been used to implement this.  
@@ -30,14 +31,21 @@ The addition of CTAT and PTAT shouldgive a constant reference voltage.Any combin
 ### Calculation Of R2
 In figure2. R2 value is calculated at zero temperature co-efficient of Vref.  
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=V_{ref}=V_{R2}&plus;V_{D3}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V_{ref}=V_{R2}&plus;V_{D3}" title="V_{ref}=V_{R2}+V_{D3}" /></a>
+
 
 For calculating VR2, R value has to be found out in the first place. Current(I0)flowing through the branch R1is 1uA.  
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=R=\frac{V_{1}-V_{D2}}{I_{o}}&space;=&space;\frac{V_{T}\cdot&space;ln\left&space;(&space;m&space;\right&space;)}{I_{o}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R=\frac{V_{1}-V_{D2}}{I_{o}}&space;=&space;\frac{V_{T}\cdot&space;ln\left&space;(&space;m&space;\right&space;)}{I_{o}}" title="R=\frac{V_{1}-V_{D2}}{I_{o}} = \frac{V_{T}\cdot ln\left ( m \right )}{I_{o}}" /></a>
+
 
 Thus, R1 value is calculated to be 36k ohms.  
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;V_{ref}}{\partial&space;T}&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;V_{ref}}{\partial&space;T}&space;=&space;0" title="\frac{\partial V_{ref}}{\partial T} = 0" /></a>
 
 
 After substituting the value of Vref from eqn(ii):  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{R_{2}}{R}ln(4)\frac{\partial&space;V_{T}}{\partial&space;T}&space;&plus;&space;\frac{\partial&space;V_{D3}}{\partial&space;T}&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{R_{2}}{R}ln(4)\frac{\partial&space;V_{T}}{\partial&space;T}&space;&plus;&space;\frac{\partial&space;V_{D3}}{\partial&space;T}&space;=&space;0" title="\frac{R_{2}}{R}ln(4)\frac{\partial V_{T}}{\partial T} + \frac{\partial V_{D3}}{\partial T} = 0" /></a>
 
 
 (∂VD3)/∂T=-1.8mV/0C which is the slope value of CTAT curve. (∂VT)/∂T=85uV/0Cwhich is the slope value of PTAT. Substituting these in eqn(iv), we obtain R2=550kohms.  
