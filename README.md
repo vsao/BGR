@@ -22,7 +22,7 @@ To create PTAT, we have to maintain equal voltage at Vd and Vso that differenceV
 
 |<img title="Ptat and Ctat" src="images/pnctat.png" width="500" length="500">|
 |:--:| 
-|*Figure 2: PTAT and CTAT Design*|
+|*Figure 1: PTAT and CTAT Design*|
 
 
 The addition of CTAT and PTAT shouldgive a constant reference voltage.Any combination of CTAT and PTAT will not give desirable Vref due to slope difference between CTAT and PTAT.For the CTAT and PTAT to exactly cancel each other, slope of PTAT is increased using a high resistance value i.e. R2.
@@ -80,7 +80,7 @@ Table 1 lists the device components and parameters:
 
 |<img title="Overall Bandgap Reference Circuit" src="images/bandgapcore.png" width="800" length="800">|
 |:--:| 
-|*Figure 2: Overall Bandgap Reference Circuit*|
+|*Figure 3: Overall Bandgap Reference Circuit*|
 
 
 ## ANALYSIS OF SIMULATION RESULT  
@@ -92,7 +92,7 @@ In figure 4, reference voltage is approximately 1.173V at room temperature. Refe
 
 |<img title="Variation of reference voltage with respect to temperature" src="images/vreftemp.png" width="700" length="700">|
 |:--:| 
-|*Figure 2: Variation of reference voltage with respect to temperature*|
+|*Figure 4: Variation of reference voltage with respect to temperature*|
 
 
 ### Variation Of Reference Voltage With Respect To VDD  
@@ -100,7 +100,7 @@ As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage
 
 |<img title="Variation Of Reference Voltage With Respect To VDD" src="images/Vrefvdd.png" width="600" length="600">|
 |:--:| 
-|*Figure 2: Variation Of Reference Voltage With Respect To VDD*|
+|*Figure 5: Variation Of Reference Voltage With Respect To VDD*|
 
 ### Bandgap Reference Settling Time  
 Transient simulation analyses in Figure 6 shows the settling time of BGR output. It is found that the circuit acquired 38.929μs to produce stable output when the supply voltage ramping up from 200.0184us to 238.9475us.
@@ -108,7 +108,7 @@ Transient simulation analyses in Figure 6 shows the settling time of BGR output.
 
 |<img title="Bandgap Reference Settling Time" src="images/Settelingtime.png" width="700" length="700">|
 |:--:| 
-|*Figure 2: Bandgap Reference Settling Time*|
+|*Figure 6: Bandgap Reference Settling Time*|
 
 
 
@@ -121,7 +121,7 @@ The layout was designed with help of the “Layout XL” based on Cadence Virtuo
 
 |<img title="Layout of Bandgap Reference" src="images/bandgaplayout.jpg" width="800" length="800">|
 |:--:| 
-|*Figure 2: Layout of Bandgap Reference*|
+|*Figure 7: Layout of Bandgap Reference*|
 
 ## CONCLUSION  
 
