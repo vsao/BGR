@@ -20,7 +20,7 @@ When the temperature increases, voltage will decreaseat Vddue toincrease in Isth
 
 To create PTAT, we have to maintain equal voltage at Vd and Vso that differenceV-Vd1 equal to voltage drop across R1 is directly proportionalto temperature. The circuit shown in Figure 1 has been used to implement this.  
 
-|<img title="Ptat and Ctat" src="images/pnctat.png" width="600" length="600">|
+|<img title="Ptat and Ctat" src="images/pnctat.png" width="500" length="500">|
 |:--:| 
 |*Figure 2: PTAT and CTAT Design*|
 
@@ -66,7 +66,7 @@ Operational Amplifier used in this circuit is basically a single stage different
 Table 1 lists the opamp components and their parameters:
 
 
-|<img title="Schematic Diagram Of OPAMP" src="images/opamp.png" width="600" length="600">|
+|<img title="Schematic Diagram Of OPAMP" src="images/opamp.png" width="500" length="500">|
 |:--:| 
 |*Figure 2: Schematic Diagram Of OPAMP*|
 
