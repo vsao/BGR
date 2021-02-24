@@ -90,7 +90,7 @@ All the simulations were done using SPECTRE tool. The models of the device were 
 ### Variation of reference voltage with respect to temperature  
 In figure 4, reference voltage is approximately 1.173V at room temperature. Reference voltage varies very little from 0º to 85ºC and remains almost constant from 10º to 50ºC. Total variation ofreference voltage is about 0.85mv which is 0.072% of reference voltage. 
 
-|<img title="Variation of reference voltage with respect to temperature" src="images/vreftemp.png" width="600" length="600">|
+|<img title="Variation of reference voltage with respect to temperature" src="images/vreftemp.png" width="700" length="700">|
 |:--:| 
 |*Figure 2: Variation of reference voltage with respect to temperature*|
 
@@ -106,7 +106,7 @@ As supply voltage VDD changes from 1.8V to 1.9V, the change in reference voltage
 Transient simulation analyses in Figure 6 shows the settling time of BGR output. It is found that the circuit acquired 38.929μs to produce stable output when the supply voltage ramping up from 200.0184us to 238.9475us.
 
 
-|<img title="Bandgap Reference Settling Time" src="images/Settelingtime.png" width="600" length="600">|
+|<img title="Bandgap Reference Settling Time" src="images/Settelingtime.png" width="700" length="700">|
 |:--:| 
 |*Figure 2: Bandgap Reference Settling Time*|
 
